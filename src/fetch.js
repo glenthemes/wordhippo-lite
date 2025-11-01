@@ -23,7 +23,7 @@ app.get(output_url, async (req, res) => {
     WordHippo.getWord(word).then(wordObj => {
       // auto fallback to error msg if word doesn't exist
       // fill all keys (e.g. syn/ant) with the error msg so that's all the user sees
-      let errorText = "An error occurred. Please double-check your spelling and try again."
+      let errorText = "An error occurred. Please double-check your spelling and try again!"
       let wordRes = {
         definition: errorText,
         related: errorText,
