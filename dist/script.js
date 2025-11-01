@@ -36,17 +36,18 @@ document.addEventListener("DOMContentLoaded", () => {
     whatWord = whatWord.includes(" ") ? whatWord.split(" ")[0] : whatWord
     textField.value = whatWord // update text field value with cleaned version (e.g. "rock bottom" -> simply "rock")
 
+    // NOTE TO SELF: the next bit (clear res + show loading) was wrapped in:
+    // if(whatWord !== currentWord)
+    // but i took it out bc it didn't work in the first place
     
-    if(whatWord !== currentWord){
-      // clear results area
-      res_area.classList.remove("vis")
-      setTimeout(() => {
-        res_area.textContent = ""
-      },fadeSpeed)
+    // clear results area
+    res_area.classList.remove("vis")
+    setTimeout(() => {
+      res_area.textContent = ""
+    },fadeSpeed)
 
-      // show "loading..."
-      loading.classList.add("vis")
-    }
+    // show "loading..."
+    loading.classList.add("vis")
 
     setTimeout(() => {
       fetch(`/${whatWord}`)
@@ -113,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let def = json.definition
       let p = document.createElement("p")
       json.isError && json.isError === true ? p.classList.add("error-msg") : null
-      p.classList.add("def")      
+      p.classList.add("def")
 
       // prepend word as BOLD (as long as it's not an error)
       if(!(json.isError && json.isError === true)){
