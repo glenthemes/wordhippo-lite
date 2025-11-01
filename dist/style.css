@@ -1,0 +1,466 @@
+/* google fonts */
+/* https://add-google-fonts.gitlab.io/tool */
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand:ital,wght@0,400;1,400&family=Playpen+Sans:ital,wght@0,100..800;1,100..800&family=Geist:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* vars */
+@import url("./vars.css");
+
+/* container */
+.container{position:absolute;top:0;left:0;width:100%;min-height:100vh;display:flex;flex-flow:column nowrap;align-items:center;right:0;margin-inline:auto;width:var(--Container-Width)}.container::after,.container::before{content:"";flex:1 0;min-height:var(--Container-Margins)}.container,.container::after,.container::before{box-sizing:border-box}
+
+/*-------- BASICS --------*/
+html {
+  box-sizing:border-box;
+}
+
+*,*::before,*::after {
+  box-sizing:inherit;
+}
+
+body {
+  background:var(--BG) none no-repeat fixed center / cover;
+  margin:0;
+  font:var(--Body-Font-Weight) var(--Body-Font-Size)/var(--Body-Line-Height) var(--Body-Font-Family), sans-serif;
+  color:var(--Text);
+}
+
+a {
+  color:#1f68e4;
+  text-decoration:none;
+}
+
+code { background:#eaeaea; font-size:smaller; }
+
+img {
+  display:block;
+  max-width:100%;
+}
+
+input, select, button {
+  font:inherit;
+  line-height:1;
+}
+
+button {
+  padding:4px 6px;
+  cursor:pointer;
+}
+
+[break-anywhere]{
+  word-break:break-all;
+}
+
+/*------ CONTAINER ------*/
+.container {
+	--Container-Margins:max(calc(20px * var(--Container-Margins-Scale-Factor)),calc(2.5vmin * var(--Container-Margins-Scale-Factor)));
+	--Container-Width:clamp(25vw,450px,85vw);
+}
+
+.cont-inner, .user-controls {
+  display:flex;
+  flex-flow:column nowrap;
+  text-align:initial;
+}
+
+.user-controls {
+  position:sticky;
+  top:0;margin-top:calc(0px - var(--Container-Margins));
+  padding:var(--Container-Margins) 0;
+  background:var(--BG);
+}
+
+.user-controls:not(:last-child){
+  margin-bottom:calc(0px - (var(--Container-Margins) / 2));
+}
+
+/* any vh SHORTER than 21:9 will do the following: */
+@media(min-aspect-ratio:21/9){
+  .user-controls {
+    position:unset;
+    top:unset;
+    margin-top:unset;
+    padding:unset;
+    background:unset;
+  }
+
+  .user-controls:not(:last-child){
+    margin-bottom:unset;
+  }
+}
+
+/*------- HEADINGS -------*/
+/* normal headings */
+h1, h2 {
+  font:var(--Heading-Font-Weight) var(--Heading-Font-Size)/var(--Heading-Line-Height) var(--Heading-Font-Family), sans-serif;
+  text-transform:var(--Heading-Text-Case);
+  letter-spacing:var(--Heading-Letter-Spacing);
+}
+
+h1 {
+  text-align:center;
+}
+
+/* "wordhippo" heading only */
+.heading-group:not(:last-child){
+  margin-bottom:var(--Form-Sections-Spacing);
+}
+
+h1.main-heading {
+  margin:0;
+  display:flex;
+  align-items:center;
+}
+
+h1.main-heading .mh-1 {
+  margin-top:calc(var(--WordHippo-Font-Size) * 0.22);
+  font:var(--WordHippo-Font-Weight) var(--WordHippo-Font-Size)/var(--WordHippo-Line-Height) var(--WordHippo-Font-Family), sans-serif;
+  text-transform:var(--WordHippo-Text-Case);
+  letter-spacing:var(--WordHippo-Letter-Spacing);
+  text-align:center;
+}
+
+h1.main-heading .mh-2 {
+  margin-left:calc(var(--Heading-Font-Size) * -0.22);
+  font:var(--Heading-Font-Weight) var(--Heading-Font-Size)/var(--Heading-Line-Height) var(--Heading-Font-Family), sans-serif;
+  text-transform:var(--Heading-Text-Case);
+  letter-spacing:var(--Heading-Letter-Spacing);
+}
+
+/*------- FORM -------*/
+form {
+  display:flex;
+  flex-flow:column nowrap;
+  align-items:flex-start; /* x */
+  gap:var(--Form-Sections-Spacing);
+}
+
+fieldset {
+  border:none;
+  padding:0;
+  margin:0;
+}
+
+legend {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+form fieldset {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  gap:8px;
+}
+
+/*----- TEXT FIELDS -----*/
+form .text-field-wrap {
+  display:flex;
+}
+
+form .text-field-wrap input {
+  all:unset;
+  flex:1;
+
+  border:var(--Text-Field-Border-Size) solid var(--Text-Field-Border-Color);
+  border-radius:var(--Text-Field-Rounded-Corners);
+  background:var(--Text-Field-BG);
+  padding:var(--Text-Field-Padding-Y) var(--Text-Field-Padding-X);
+  color:var(--Text-Field-Text-Color);
+  line-height:initial;
+
+  transition:border-color var(--Text-Field-FOCUS-Speed) ease-in-out, outline var(--Text-Field-FOCUS-Speed) ease-in-out;
+  outline:var(--Text-Field-FOCUS-Border-Size) solid transparent;
+  outline-offset:calc(0px - var(--Text-Field-FOCUS-Border-Size));
+}
+
+form .text-field-wrap input:focus {
+  border-color:transparent;
+  outline-color:var(--Text-Field-FOCUS-Border-Color);
+}
+
+form .text-field-wrap input::placeholder {
+  color:var(--Text-Field-Placeholder-Text-Color);
+}
+
+/*----- RADIO -----*/
+form .radio-row {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  gap:var(--Radio-Options-Spacing-Y) var(--Radio-Options-Spacing-X); /* row column */
+}
+
+form .radio-pair {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+form .radio-pair label {
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:var(--Radio-Buttons-Center-Gap);
+  padding:var(--Radio-Buttons-Group-Padding-Y) var(--Radio-Buttons-Group-Padding-X);
+  z-index:0;
+  transition:transform var(--Radio-HOVER-Speed) ease-in-out;
+}
+
+form .radio-pair label:has(input[type="radio"]:hover){
+  transform:scale(var(--Radio-HOVER-Scale-Factor),var(--Radio-HOVER-Scale-Factor));
+}
+
+/* radio circles :: visually hidden, take up the whole thing */
+form .radio-pair label input[type="radio"]{
+  margin:unset;
+  padding:unset;
+  background:unset;
+  color:unset;
+
+  position:absolute;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  z-index:1;
+  cursor:pointer;
+
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  outline-offset:4px;
+  border-radius:var(--Radio-Circle-Total-Size);
+}
+
+/* radio circles :: new :: outer */
+form .radio-pair label .radio-circle {
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:var(--Radio-Circle-Total-Size);
+  height:var(--Radio-Circle-Total-Size);
+  border:var(--Radio-Circle-Border-Size) solid var(--Radio-Circle-Border-Color);
+  border-radius:var(--Radio-Circle-Rounded-Corners);
+  background:var(--Radio-Circle-BG);
+}
+
+form .radio-pair label:has(input:checked) .radio-circle {
+  border-color:var(--Radio-Circle-ACTIVE-Border-Color);
+  background:var(--Radio-Circle-ACTIVE-BG);
+}
+
+/* radio circles :: new :: inner */
+form .radio-pair label .radio-circle:after {
+  content:"";
+  display:block;
+  width:var(--Radio-Circle-ACTIVE-Dot-Size);
+  height:var(--Radio-Circle-ACTIVE-Dot-Size);
+  background:var(--Radio-Circle-ACTIVE-Dot-Color);
+  border-radius:var(--Radio-Circle-Rounded-Corners);
+  opacity:0;
+}
+
+form .radio-pair label:has(input:checked) .radio-circle:after {
+  opacity:1;
+}
+
+/* radio circles :: text */
+form .radio-pair label .label-text {
+}
+
+form .radio-pair :is(input, select){
+  flex:1;
+}
+
+/*----- FORM CONTROLS -----*/
+form .submit-row {
+  display:flex;
+  align-items:center;
+  gap:var(--Form-Btns-Spacing);
+}
+
+form .submit-row button {
+  border-radius:var(--Rounded-Corners);
+  padding:var(--Form-Btns-Padding-Y) var(--Form-Btns-Padding-X);
+  transition:transform var(--Form-Btns-HOVER-Speed) ease-in-out, border-color var(--Form-Btns-HOVER-Speed) ease-in-out, background-color var(--Form-Btns-HOVER-Speed) ease-in-out, color var(--Form-Btns-HOVER-Speed) ease-in-out;
+}
+
+form .submit-row button:hover {
+  transform:scale(var(--Form-Btns-HOVER-Scale-Factor),var(--Form-Btns-HOVER-Scale-Factor));
+}
+
+/*----- SUBMIT BUTTON -----*/
+form .submit-row button[type="submit"]{
+  border:var(--Buttons-1-Border-Size) solid var(--Buttons-1-Border-Color);
+  background:var(--Buttons-1-BG);
+  color:var(--Buttons-1-FG);
+}
+
+form .submit-row button[type="submit"]:hover {
+  border-color:var(--Buttons-1-HOVER-Border-Color);
+  background:var(--Buttons-1-HOVER-BG);
+  color:var(--Buttons-1-HOVER-FG);
+}
+
+/*----- RESET BUTTON -----*/
+form .submit-row button[type="reset"]{
+  border:var(--Buttons-2-Border-Size) solid var(--Buttons-2-Border-Color);
+  background:var(--Buttons-2-BG);
+  color:var(--Buttons-2-FG);
+}
+
+form .submit-row button[type="reset"]:hover {
+  border-color:var(--Buttons-2-HOVER-Border-Color);
+  background:var(--Buttons-2-HOVER-BG);
+  color:var(--Buttons-2-HOVER-FG);
+}
+
+/*----- "LOADING" -----*/
+form .loading {
+  margin-left:0.25em;
+
+  visibility:hidden;
+  opacity:0;
+  transition:opacity var(--Loading-Fade-Speed) ease-in-out, visibility 0s var(--Loading-Fade-Speed) ease-in-out;
+}
+
+form .loading.vis {
+  visibility:visible;
+  opacity:1;
+  transition:opacity 0.4s ease-in-out, visibility 0s 0s ease-in-out;
+}
+
+/*----- RESULT AREA :: GENERAL -----*/
+.expandie-1 {
+  display:grid;
+  grid-template-rows:0fr;
+  overflow:hidden;
+  transition:grid-template-rows var(--Loading-Fade-Speed) ease-in-out;
+}
+
+.expandie-2 {
+  min-height:0;
+  visibility:hidden;
+  transition:visibility 0s var(--Loading-Fade-Speed) ease-in-out;
+}
+
+.expandie-1:has(.result-area.vis){
+  grid-template-rows:1fr;
+  transition:grid-template-rows var(--Loading-Fade-Speed) ease-in-out;
+}
+
+.expandie-2:has(.result-area.vis){
+  visibility:visible;
+  transition:visibility 0s 0s ease-in-out;
+}
+
+.result-area {
+  display:flex;
+  flex-flow:row wrap;
+  margin-top:max(var(--Form-Sections-Spacing),var(--Container-Margins));
+}
+
+.result-area p:first-child, .result-area p + p { margin-top:0 }
+.result-area p:last-child { margin-bottom:0 }
+
+/*----- RESULT AREA :: FADE -----*/
+.result-area {
+  visibility:hidden;
+  opacity:0;
+  transition:opacity var(--Loading-Fade-Speed) ease-in-out, visibility 0s var(--Loading-Fade-Speed) ease-in-out;
+}
+
+.result-area.vis {
+  visibility:visible;
+  opacity:1;
+  transition:opacity 0.4s ease-in-out, visibility 0s 0s ease-in-out;
+}
+
+/*----- DEFINITION -----*/
+.def {
+  width:100%;
+  padding:var(--Para-Padding-Y) var(--Para-Padding-X);
+  border-radius:var(--Rounded-Corners);
+  background:var(--Def-BG);
+  color:var(--Def-FG);
+}
+
+/* def: error */
+.def.error-msg {
+  background:var(--Error-BG);
+  color:var(--Error-FG);
+}
+
+/*----- SYN + ANT -----*/
+.result-area:has(.syn,.ant){
+  gap:var(--Results-Tiles-Spacing); /* row column */
+}
+
+.result-area .syn, .result-area .ant {
+  padding:var(--Results-Tiles-Padding-Y) var(--Results-Tiles-Padding-X);
+  border-radius:var(--Rounded-Corners);
+}
+
+.result-area .syn {
+  background:var(--Syn-BG);
+  color:var(--Syn-FG);
+}
+
+.result-area .ant {
+  background:var(--Ant-BG);
+  color:var(--Ant-FG);
+}
+
+/*----- SENTENCES -----*/
+.sentence {
+  width:100%;
+  padding:var(--Para-Padding-Y) var(--Para-Padding-X);
+  border-left:var(--Para-Blockquote-Border-Size) solid var(--Para-Blockquote-Border-Color);
+  border-radius:var(--Rounded-Corners);
+  background:var(--Para-BG);
+  color:var(--Para-FG);
+}
+
+/*----- CRD -----*/
+.crd {
+  position:fixed;
+  bottom:0;right:0;
+  margin:0 calc(var(--Crd-Corner-Offset) - var(--Crd-Touch-Padding)) calc(var(--Crd-Corner-Offset) - var(--Crd-Touch-Padding)) 0;
+  z-index:8;
+}
+
+.crd > a {
+  display:flex;
+  align-items:center;
+  gap:var(--Crd-Center-Gap);
+  color:var(--Crd-Text-Color);
+  padding:var(--Crd-Touch-Padding);
+  font-family:var(--Caps-Font-Family), sans-serif;
+  font-weight:var(--Caps-Font-Weight);
+  font-size:var(--Caps-Font-Size);
+  text-transform:uppercase;
+  letter-spacing:var(--Caps-Letter-Spacing);
+  line-height:initial;
+}
+
+.crd > a > span:not([class]){
+  transform:translateY(var(--Caps-Vertical-Align-Adjust));
+}
+
+.crd .gt {
+  display:block;
+  width:var(--Crd-Logo-Size);
+  height:var(--Crd-Logo-Size);
+  mask-image:url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" xml:space="preserve"><path d="M565.833 79.093c-4.583 1.178-60.083 22.573-123.333 47.545-63.25 24.971-127 50.107-141.667 55.856-14.666 5.749-44.291 17.369-65.833 25.821a58277.635 58277.635 0 0 1-70.632 27.658c-17.307 6.759-35.131 14.641-39.61 17.515-9.276 5.953-19.276 16.719-25.683 27.651l-4.382 7.479-.263 228.608-.263 228.607 4.56 9.734c6.988 14.917 20.712 27.281 41.513 37.4 20.507 9.977 302.462 122.801 318.057 127.271 13.346 3.826 24.303 3.798 38.37-.096 5.958-1.649 39.333-14.273 74.166-28.052 34.834-13.779 77.959-30.79 95.834-37.802 162.291-63.66 159.989-62.675 170.097-72.75 5.129-5.112 11.143-12.987 13.364-17.5l4.039-8.205.467-226.097.468-226.098 16.199-6.225c45.337-17.421 100.309-39.748 107.492-43.657 11.674-6.354 17.874-13.995 17.874-22.028 0-10.318-2.817-12.225-35.479-24.027-18.437-6.662-23.056-7.701-34.233-7.701-17.034 0-26.39 2.587-66.122 18.281A2077998.192 2077998.192 0 0 1 507.5 357.719l-31.667 12.492-109.166-42.792c-60.042-23.535-110.57-43.532-112.284-44.438-2.501-1.321 10.679-7.06 66.667-29.029 38.381-15.06 82.908-32.555 98.95-38.877 123.533-48.685 169.99-66.742 171.714-66.742.864 0 39.964 15.07 86.889 33.488 89.61 35.173 107.032 40.912 118.656 39.087 3.799-.596 20.033-6.143 36.074-12.325 25.332-9.763 29.47-11.87 31.474-16.023 3.507-7.267.773-12.502-9.844-18.857-14.059-8.413-227.652-92.719-241.622-95.368-11.942-2.265-37.326-1.86-47.508.758M277.5 371.666c48.583 19.084 104.833 41.225 125 49.202 63.459 25.101 73.953 27.908 90.805 24.294 4.871-1.045 65.932-24.456 135.692-52.025s131.445-51.865 137.078-53.991l10.241-3.865 1.106 30.276c.608 16.652.874 105.634.592 197.737l-.514 167.461-40.833 16.02a83675.966 83675.966 0 0 0-90.834 35.719c-125.854 49.585-124.155 48.955-124.368 46.071-.111-1.502-.673-45.857-1.25-98.565l-1.048-95.833-4.668-10c-5.561-11.913-15.84-23.013-26.166-28.255-10.178-5.168-134.984-49.63-139.166-49.578-4.147.051-92.304 31.428-95.31 33.923-3.096 2.57-2.717 8.754.726 11.841 1.605 1.438 41.355 16.309 88.334 33.045l85.416 30.43.009 70.964c.005 39.03.493 78.282 1.086 87.228l1.077 16.265-6.503-2.342c-8.671-3.123-243.558-96.795-249.419-99.467L170 726.132V573.337c0-84.038.494-173.109 1.098-197.938l1.098-45.142 8.485 3.356c4.667 1.845 48.236 18.969 96.819 38.053" fill-rule="evenodd"/></svg>');
+  mask-size:contain;
+  mask-position:center;
+  mask-repeat:no-repeat;
+  background:var(--Crd-Logo-Color);
+}

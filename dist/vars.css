@@ -1,0 +1,139 @@
+:root {
+  /* container */
+  --Container-Margins-Scale-Factor:1.35; /* base was 20px/2.5vmin */
+
+  /* body font */
+  --Body-Font-Family:"Geist";
+  --Body-Font-Weight:450;
+  --Body-Font-Size:0.9rem;
+  --Body-Line-Height:1.65;
+  --Body-LH-V-Gap:calc(((var(--Body-Font-Size) * var(--Body-Line-Height)) - var(--Body-Font-Size)) / 2);
+
+  /* "wordhippo" heading only */
+  --WordHippo-Font-Family:"Gochi Hand";
+  --WordHippo-Text-Case:uppercase;
+  --WordHippo-Font-Weight:normal;
+  --WordHippo-Font-Size:calc(var(--Heading-Font-Size) * 1.35);
+  --WordHippo-Letter-Spacing:0.05em;
+  --WordHippo-Line-Height:1.65;
+
+  /* normal headings */
+  --Heading-Font-Family:"Playpen Sans";
+  --Heading-Text-Case:uppercase;
+  --Heading-Font-Weight:normal;
+  --Heading-Font-Size:0.95rem;
+  --Heading-Letter-Spacing:0.01em;
+  --Heading-Line-Height:1.65;
+
+  /* caps / smallcaps */
+  --Caps-Font-Family:"Figtree";
+  --Caps-Font-Weight:500;
+  --Caps-Font-Size:calc(var(--Body-Font-Size) * 0.775);
+  --Caps-Letter-Spacing:0.05rem;
+  --Caps-Vertical-Align-Adjust:calc(var(--Caps-Font-Size) * 0.055);
+
+  /* colors */
+  --Borders:#d9dadc;
+  --BG:#fff;
+  --Rounded-Corners:3px;
+
+  /* button type 1 */
+  --Buttons-1-Border-Size:1px;
+  --Buttons-1-Border-Color:var(--Buttons-1-BG);
+  --Buttons-1-BG:#0080ff;
+  --Buttons-1-FG:#eff6ff;
+  --Buttons-1-HOVER-Border-Color:var(--Buttons-1-HOVER-BG);
+  --Buttons-1-HOVER-BG:#1e66f5;
+  --Buttons-1-HOVER-FG:var(--Buttons-1-FG);
+
+  /* button type 2 */
+  --Buttons-2-Border-Size:1px;
+  --Buttons-2-Border-Color:var(--Borders);
+  --Buttons-2-BG:#fff;
+  --Buttons-2-FG:#6c6e74;
+  --Buttons-2-HOVER-Border-Color:var(--Buttons-2-Border-Color);
+  --Buttons-2-HOVER-BG:var(--Buttons-2-BG);
+  --Buttons-2-HOVER-FG:#4b5262;
+
+  --Tinted-BG:#f3f5fd;
+
+  --Heading:#191c22;
+  --Text:#4b5262;
+  --Text-Lighter:rgba(75,82,98,0.75);
+
+  /* the form */
+  --Form-Sections-Spacing:1em;
+
+  /* text fields */
+  --Text-Field-Border-Size:1px;
+  --Text-Field-Border-Color:var(--Borders);
+  --Text-Field-BG:var(--BG);
+  --Text-Field-Padding-X:0.5em;
+  --Text-Field-Padding-Y:0.5em;
+  --Text-Field-Text-Color:var(--Text);
+  --Text-Field-Placeholder-Text-Color:var(--Text-Lighter);
+  --Text-Field-Rounded-Corners:var(--Rounded-Corners);
+  --Text-Field-FOCUS-Speed:150ms;
+  --Text-Field-FOCUS-Border-Size:2px;
+  --Text-Field-FOCUS-Border-Color:var(--Buttons-1-BG);
+
+  /* radios */
+  --Radio-Options-Spacing-X:calc(10px - var(--Radio-Buttons-Group-Padding-X));
+  --Radio-Options-Spacing-Y:calc(10px - var(--Radio-Buttons-Group-Padding-Y));
+
+  --Radio-Buttons-Group-Padding-X:0.25em;
+  --Radio-Buttons-Group-Padding-Y:0px;
+  --Radio-Buttons-Center-Gap:0.5em;
+
+  --Radio-Circle-Base-Size:calc(var(--Body-Font-Size) * 1.25);
+  --Radio-Circle-Border-Size:1px;
+  --Radio-Circle-Border-Color:var(--Borders);
+  --Radio-Circle-Total-Size:calc(var(--Radio-Circle-Base-Size) + (var(--Radio-Circle-Border-Size) * 2));
+  --Radio-Circle-Rounded-Corners:100%;
+  --Radio-Circle-BG:var(--BG);
+
+  --Radio-Circle-ACTIVE-Border-Color:var(--Buttons-1-BG);
+  --Radio-Circle-ACTIVE-BG:var(--Buttons-1-FG);
+  --Radio-Circle-ACTIVE-Dot-Size:calc(var(--Radio-Circle-Base-Size) - 5px);
+  --Radio-Circle-ACTIVE-Dot-Color:var(--Buttons-1-BG);
+
+  --Radio-HOVER-Speed:0.15s;
+  --Radio-HOVER-Scale-Factor:1.069;
+
+  /* form buttons */
+  --Form-Btns-Spacing:0.5em;
+  --Form-Btns-Padding-X:0.5em;
+  --Form-Btns-Padding-Y:0.420em;
+  --Form-Btns-HOVER-Speed:0.15s;
+  --Form-Btns-HOVER-Scale-Factor:1.1;
+
+  /* "loading..." */
+  --Loading-Fade-Speed:0.25s;
+
+  /* results area */
+  --Results-Tiles-Spacing:0.5em;
+  --Results-Tiles-Padding-X:0.5em;
+  --Results-Tiles-Padding-Y:calc(var(--Results-Tiles-Padding-X) - var(--Body-LH-V-Gap));
+  --Def-BG:#ececfd;
+  --Def-FG:var(--Text);
+  --Error-BG:#f9e2e6;
+  --Error-FG:var(--Text);
+  --Syn-BG:#deece2;
+  --Syn-FG:var(--Text);
+  --Ant-BG:#f9e2e6;
+  --Ant-FG:var(--Text);
+  --Para-Padding-X:0.9em;
+  --Para-Padding-Y:calc(var(--Para-Padding-X) - var(--Body-LH-V-Gap));
+  --Para-Blockquote-Border-Size:3px;
+  --Para-Blockquote-Border-Color:#7aa2d7;
+  --Para-BG:#edf4fe;
+  --Para-FG:var(--Text);
+
+  /* crd */
+  --Crd-Corner-Offset:22px;
+  --Crd-Touch-Padding:5px;
+  --Crd-Text-Color:#6e727a;
+  --Crd-Center-Gap:0.69em;
+  --Crd-Logo-Size:calc(var(--Body-Font-Size)  * 1.3);
+  --Crd-Logo-Color:#6f7580;
+}/* end root */

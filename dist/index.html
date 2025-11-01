@@ -1,0 +1,129 @@
+<!--
+  WORDHIPPO, MAIN SITE:
+  [#] https://wordhippo.com
+
+  WORDHIPPO PACKAGE:
+  [#] https://www.npmjs.com/package/wordhippo
+  [#] https://www.skypack.dev/view/wordhippo
+  [#] https://npm.io/package/wordhippo
+
+  GOOGLE FONTS:
+  [#] Gochi Hand, Playpen Sans, Geist, Figtree
+
+  OTHER CREDITS:
+  [#] https://nemzes.net/posts/animating-height-auto
+
+  MISC NPM PACKAGES:
+  [#] CORS, Express
+--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordHippo LITE</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦛</text></svg>" />
+  <meta name="robots" content="nofollow">
+  
+  <link href="./style.css" rel="stylesheet">
+  <script src="./script.js"></script>
+</head>
+<body>
+
+<main class="container">
+<div class="cont-inner">
+
+  <div class="user-controls">
+    <!----- HEADING ----->
+    <div class="heading-group">
+      <h1 class="main-heading">
+        <span class="mh-1">wordhippo</span>
+        <span class="mh-2">&nbsp;lite</span>
+      </h1>
+    </div>
+
+    <form id="hippo-form">
+      <fieldset>
+        <!----- LEGEND ----->
+        <legend>Please enter a word query.</legend>
+
+        <div class="text-field-wrap">
+          <input id="word" type="text" placeholder="e.g. chair" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <!----- LEGEND ----->
+        <legend>Please select what you're looking for.</legend>
+
+        <div class="radio-row">
+          <!----- DEFINITION ----->
+          <div class="radio-pair">
+            <label for="def">
+              <input id="def" value="definition" type="radio" name="p" checked>
+              <span class="radio-circle" aria-hidden="true"></span>
+              <span class="label-text">Definition</span>
+            </label>
+          </div>
+
+          <!----- SYNONYMS ----->
+          <div class="radio-pair">
+            <label for="syn">
+              <input id="syn" value="related" type="radio" name="p">
+              <span class="radio-circle" aria-hidden="true"></span>
+              <span class="label-text">Synonyms</span>
+            </label>
+          </div>
+
+          <!----- ANTONYMS ----->
+          <div class="radio-pair">
+            <label for="ant">
+              <input id="ant" value="opposites" type="radio" name="p">
+              <span class="radio-circle" aria-hidden="true"></span>
+              <span class="label-text">Antonyms</span>
+            </label>
+          </div>
+
+          <!----- SENTENCES ----->
+          <div class="radio-pair">
+            <label for="sentences">
+              <input id="sentences" value="sentences" type="radio" name="p">
+              <span class="radio-circle" aria-hidden="true"></span>
+              <span class="label-text">Example sentences</span>
+            </label>
+          </div>
+        </div><!--end radio-row-->
+      </fieldset>
+
+      <!----- SUBMIT ----->
+      <div class="submit-row">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <span class="loading">Searching, please wait...</span>
+      </div>
+    </form>
+  </div><!--end user-controls-->
+
+  <!----- IMAGE PREVIEW ----->
+  <div class="expandie-1">
+    <div class="expandie-2">
+      <div class="result-area"></div>
+    </div>
+  </div>
+
+</div><!--end cont-inner-->
+</main>
+
+<!-- crd -->
+<div class="crd">
+  <a href="https://github.com/glenthemes/wordhippo-lite">
+    <span>info + credits</span>
+    <span class="gt"></span>
+  </a>
+</div>
+
+<!------------------------>
+
+</body>
+</html>
