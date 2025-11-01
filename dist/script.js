@@ -113,8 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
       let def = json.definition
       let p = document.createElement("p")
       json.isError && json.isError === true ? p.classList.add("error-msg") : null
-      p.classList.add("def")
-      p.innerHTML = def.slice(-1) !== "." ? `<b>${json.word}:</b> ${def}.` : `<b>${json.word}:</b> ${def}`
+      p.classList.add("def")      
+
+      // prepend word as BOLD (as long as it's not an error)
+      if(!(json.isError && json.isError === true)){
+        p.innerHTML = def.slice(-1) !== "." ? `<b>${json.word}:</b> ${def}.` : `<b>${json.word}:</b> ${def}`
+      }
+
       res_area.append(p)
     }
 
