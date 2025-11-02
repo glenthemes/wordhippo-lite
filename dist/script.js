@@ -117,8 +117,13 @@ document.addEventListener("DOMContentLoaded", () => {
       p.classList.add("def")
 
       // prepend word as BOLD (as long as it's not an error)
-      if(!(json.isError && json.isError === true)){
-        p.innerHTML = def.slice(-1) !== "." ? `<b>${json.word}:</b> ${def}.` : `<b>${json.word}:</b> ${def}`
+      let defWithDot = def.slice(-1) !== "." ? `${def}.` : def
+
+      if(json.isError && json.isError === true){
+        p.textContent = defWithDot
+      } else {
+        let wordAlt = json.word.slice(0,1).toUpperCase() + json.word.slice(1)
+        p.innerHTML = `<b>${wordAlt}:</b> ${defWithDot}`
       }
 
       res_area.append(p)
