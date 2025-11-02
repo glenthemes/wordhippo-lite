@@ -54,7 +54,7 @@ The WordHippo apps on [Android](https://www.wordhippo.com/what-is/info/android.h
 ### 🛠️&emsp13;Credits:
 
 - [WordHippo unofficial API](https://npm.im/wordhippo) by [@&#x2060;jochemstoel](https://npm.im/~jochemstoel)
-- Other packages: [CORS](https://npm.im/cors), [Express](https://npm.im/express)
+- [CORS](https://npm.im/cors), [Express](https://npm.im/express), [fly.io](https://fly.io) for deployment
 - Google Fonts: [Gochi Hand](https://fonts.google.com/specimen/Gochi+Hand), [Playpen Sans](https://fonts.google.com/specimen/Playpen+Sans), [Geist](https://fonts.google.com/specimen/Geist), [Figtree](https://fonts.google.com/specimen/Figtree)
 - [animating `height:auto`](https://nemzes.net/posts/animating-height-auto)
 - favicon: [Twemoji](https://twemoji-cheatsheet.vercel.app)
