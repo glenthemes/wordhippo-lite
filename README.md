@@ -19,7 +19,16 @@ Expand for screen recording preview.
 </summary>
 <br/>
 
-![Screen recording of the WordHippo Lite desktop site, in which the starting screen is the same as the image included above. The user types in the word "chair" into the text field and clicks "Submit". Since the "definition" radio button is selected by default, the app displays the definition of a chair in a light purple toast after a brief "Searching, please wait..." message is shown. Next, the user clicks the "synonyms" radio button without clicking "Submit", and the definition message collapses and reveals a list of chair synonyms, each with a light green background. The user repeats this for the "antonyms" button, and a list of chair antonyms appears, each with a light red background. Lastly, the user clicks the "example sentences" radio button, which reveals a long scrollable list of example sentences with light blue backgrounds and a thin dark blue left border. The demo completes when the user clicks the "Reset" button, of which the currently viewed panel is retracted, and the word text field is cleared.](https://cdn.jsdelivr.net/gh/glenthemes/wordhippo-lite/previews/demo.mp4)
+https://github.com/user-attachments/assets/239e0981-8f95-4f5f-95f9-7a4ac98722b8
+
+<details>
+<summary>
+Expand for alt text.
+</summary>
+<br/>
+
+<sup>Screen recording of the WordHippo Lite desktop site, in which the starting screen is the same as the image included above. The user types in the word "chair" into the text field and clicks "Submit". Since the "definition" radio button is selected by default, the app displays the definition of a chair in a light purple toast after a brief "Searching, please wait..." message is shown. Next, the user clicks the "synonyms" radio button without clicking "Submit", and the definition message collapses and reveals a list of chair synonyms, each with a light green background. The user repeats this for the "antonyms" button, and a list of chair antonyms appears, each with a light red background. Lastly, the user clicks the "example sentences" radio button, which reveals a long scrollable list of example sentences with light blue backgrounds and a thin dark blue left border. The demo completes when the user clicks the "Reset" button, of which the currently viewed panel is retracted, and the word text field is cleared.</sup>
+</details>
 </details>
 
 ---
