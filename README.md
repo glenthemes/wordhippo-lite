@@ -4,9 +4,9 @@
 - [👋&emsp13;About](#about)
 - [👁️&emsp13;Demo](#%EF%B8%8Fdemo)
 - [💡&emsp13;Purpose](#purpose)
-- [🗺️&emsp13;Roadmap](#roadmap)
-- [🛠️&emsp13;Credits](#credits)
-- [💌&emsp13;Feedback](#feedback)
+- [🗺️&emsp13;Roadmap](#%EF%B8%8Froadmap)
+- [🛠️&emsp13;Credits](#%EF%B8%8Fcredits)
+- [📮&emsp13;Feedback](#feedback)
 
 ---
 
@@ -19,9 +19,8 @@ Expand for screen recording preview.
 </summary>
 <br/>
 
-![Screen recording of the WordHippo Lite desktop site, in which the starting screen is the same as the image included above. The user types in the word "chair" into the text field and clicks "Submit". Since the "definition" radio button is selected by default, the app displays the definition of a chair in a light purple toast after a brief "Searching, please wait..." message is shown. Next, the user clicks the "synonyms" radio button without clicking "Submit", and the definition message collapses and reveals a list of chair synonyms, each with a light green background. The user repeats this for the "antonyms" button, and a list of chair antonyms appears, each with a light red background. Lastly, the user clicks the "example sentences" radio button, which reveals a long scrollable list of example sentences with light blue backgrounds and a thin dark blue left border. The demo completes when the user clicks the "Reset" button, of which the currently viewed panel is retracted, and the word text field is cleared.](./previews/demo.mp4)
+![Screen recording of the WordHippo Lite desktop site, in which the starting screen is the same as the image included above. The user types in the word "chair" into the text field and clicks "Submit". Since the "definition" radio button is selected by default, the app displays the definition of a chair in a light purple toast after a brief "Searching, please wait..." message is shown. Next, the user clicks the "synonyms" radio button without clicking "Submit", and the definition message collapses and reveals a list of chair synonyms, each with a light green background. The user repeats this for the "antonyms" button, and a list of chair antonyms appears, each with a light red background. Lastly, the user clicks the "example sentences" radio button, which reveals a long scrollable list of example sentences with light blue backgrounds and a thin dark blue left border. The demo completes when the user clicks the "Reset" button, of which the currently viewed panel is retracted, and the word text field is cleared.](https://cdn.jsdelivr.net/gh/glenthemes/wordhippo-lite/previews/demo.mp4)
 </details>
-<br>
 
 ---
 
@@ -53,7 +52,7 @@ The WordHippo apps on [Android](https://www.wordhippo.com/what-is/info/android.h
 
 ---
 
-### 💌&emsp13;Feedback:
+### 📮&emsp13;Feedback:
 
 💻&numsp;[discord.gg/RcMKnwz](https://discord.gg/RcMKnwz)  
 💌&numsp;[glenthemes.exe@gmail.com](mailto:glenthemes.exe@gmail.com)
